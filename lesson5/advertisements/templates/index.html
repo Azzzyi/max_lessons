@@ -1,11 +1,14 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 {% load static %}
-{% block title %}Главная{% endblock %}
+
+{% block title %}
+Главная
+{% endblock %}
 
 {% block content %}
 <ul class="nav nav-pills sticky-top bg-white nav-fill">
   <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="index.html">
+    <a class="nav-link active" aria-current="page" href="{% url 'main-page' %}">
       <span style="font-weight: bold;">Главная</span>
     </a>
   </li>
@@ -14,7 +17,7 @@
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="advertisement-post.html">
+    <a class="nav-link" href="{% url 'advertisement-post' %}">
       <span style="font-weight: bold;">Разместить объявление</span>
     </a>
   </li>
@@ -96,7 +99,7 @@
       <div class="row g-0">
         <div class="col-md-4">
           <a href="advertisement.html" class="nav-link">
-            <img src="img/adv.png" class="img-fluid rounded-start" alt="Card title">
+            <img src="{% static 'img/adv.png' %}" class="img-fluid rounded-start" alt="Card title">
           </a>
         </div>
         <div class="col-md-8">
@@ -123,7 +126,7 @@
       <div class="row g-0">
         <div class="col-md-4">
           <a href="advertisement.html" class="nav-link">
-            <img src="img/adv.png" class="img-fluid rounded-start" alt="Card title">
+            <img src="{% static 'img/adv.png' %}" class="img-fluid rounded-start" alt="Card title">
           </a>
         </div>
         <div class="col-md-8">
@@ -150,7 +153,7 @@
       <div class="row g-0">
         <div class="col-md-4">
           <a href="advertisement.html" class="nav-link">
-            <img src="img/adv.png" class="img-fluid rounded-start" alt="Card title">
+            <img src="{% static 'img/adv.png' %}" class="img-fluid rounded-start" alt="Card title">
           </a>
         </div>
         <div class="col-md-8">
@@ -206,7 +209,4 @@
     </div>
   </nav>
 </footer>
-{% endblock %}
-
-{% block scripts %}
 {% endblock %}
